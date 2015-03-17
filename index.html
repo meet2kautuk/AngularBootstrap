@@ -17,6 +17,14 @@
 		<p>
 			Your screen name would be: <span ng-bind="author.toLowerCase().split(' ').join('-')"></span>
 		</p>
+		<p>
+			Titles Available are:
+			<p>
+				<ul ng-repeat="t in titlesAvailable">
+					<li>{{t}}</li>
+				</ul>
+			</p>
+		</p>
 	</div>
 	
 
