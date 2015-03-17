@@ -3,8 +3,23 @@
 <head>
 	<title>Angular Bootstarp</title>
 	<script src="libs/angular.js" ></script>
-</head>
-<body ng-app="BlogEngine">
 
+</head>
+<body ng-app="AvenueBlog">
+	<div ng-controller="WelcomeController" >
+		Welcome to {{helloTo.title}} 
+		<p>
+			Blog engine written with AngularJS.
+		</p>
+		<p>
+			Enter your name: <input type="text" name="author" ng-model="author"/>
+		</p>
+		<p>
+			Your screen name would be: <span ng-bind="author.toLowerCase().split(' ').join('-')"></span>
+		</p>
+	</div>
+	
+
+<script src="app.js" ></script>
 </body>
 </html>
