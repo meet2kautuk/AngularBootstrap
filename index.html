@@ -25,6 +25,15 @@
 				</ul>
 			</p>
 		</p>
+		
+		<p>
+			Popular Tags:
+			<p>
+				<ul ng-repeat="t in popularTags | orderBy:'rank'">
+					<li>{{t.tag | lowercase}}</li>
+				</ul>
+			</p>
+		</p>
 	</div>
 	
 
