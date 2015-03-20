@@ -37,6 +37,15 @@
 				</ul>
 			</p>
 		</p>
+		
+		<p>
+			Authors:
+			<p>
+				<ul ng-repeat="auth in authors">
+					<li>{{auth.Name}}</li>
+				</ul>
+			</p>
+		</p>
 		<div ng-include="'includes/footer.html'"></div>
 	</div>
 </body>
