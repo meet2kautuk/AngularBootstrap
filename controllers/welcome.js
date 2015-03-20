@@ -8,4 +8,7 @@ AvenueBlogApp.controller("WelcomeController", function($scope, $http) {
     $http.get(url).success(function(response){
         $scope.authors = response;
     });
+    
+    
+    
  });

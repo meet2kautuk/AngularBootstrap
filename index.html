@@ -3,8 +3,11 @@
 <head>
 	<title>Angular Bootstarp</title>
 	<script src="libs/angular.js" ></script>
+	<script src="libs/angular-route.js" ></script>
 	<script src="app.js" ></script>
 	<script src="controllers/welcome.js" ></script>
+	<script src="controllers/addBlog.js" ></script>
+	<script src="controllers/addAuthor.js" ></script>
 	
 	
 </head>
@@ -13,6 +16,13 @@
 		<div ng-include="'includes/header.html'"></div>
 		<p>
 			Blog engine written with AngularJS.
+		</p>
+		<p>
+			<a href="#addBlog">Add Blog</a> |
+			<a href="#addAuthor">Add Author</a>
+		</p>
+		<p>
+			<div ng-view></div>
 		</p>
 		<p>
 			Enter your name: <input type="text" name="author" ng-model="author"/>
@@ -47,6 +57,24 @@
 			</p>
 		</p>
 		<div ng-include="'includes/footer.html'"></div>
+		
+		<script type="text/ng-template" id="tmplAddBlog.htm">
+			<p>
+				Add Blog  {{message}}
+			</p>
+			<p>
+				Enter Blog details	
+			</p>
+		</script>
+		
+		<script type="text/ng-template" id="tmplAddAuthor.htm">
+			<p>
+				Add Author {{message}}
+			</p>
+			<p>
+				Enter Author details	
+			</p>
+		</script>
 	</div>
 </body>
 </html>
