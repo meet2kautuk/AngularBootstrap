@@ -63,7 +63,9 @@
 				Add Blog  {{message}}
 			</p>
 			<p>
-				Enter Blog details	
+				Enter Blog Title <input type="text" name="" ng-model="blogTitle" ng-change="change()" />
+				<br>
+				Your blog link will be : <span ng-bind="titlePermalink"></span>
 			</p>
 		</script>
 		

@@ -11,3 +11,13 @@ AvenueBlogApp.config(['$routeProvider', function($routeProvider){
        redirectTo: '/addBlog'
     });
 }]);
+
+
+AvenueBlogApp.service('PermalinkService', function(){
+    this.generatePermalinkTitle = function(plainTitle){
+        if(plainTitle){
+            return plainTitle.toLowerCase().replace(/\W+/g, "-");
+        }
+    };
+});
+
