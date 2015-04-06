@@ -67,6 +67,12 @@
 				<br>
 				Your blog link will be : <span ng-bind="titlePermalink"></span>
 			</p>
+			<p>
+				Enter number of lines you are expecting to write:
+				<input type="text" name="" ng-model="numOfLines"/>
+				<br/>
+				Expect comments: <span ng-bind="MathService.getExpectedComments(numOfLines)"> </span>
+			</p>
 		</script>
 		
 		<script type="text/ng-template" id="tmplAddAuthor.htm">

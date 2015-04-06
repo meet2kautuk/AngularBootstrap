@@ -21,3 +21,26 @@ AvenueBlogApp.service('PermalinkService', function(){
     };
 });
 
+AvenueBlogApp.factory("MathFactory", function () {
+    return {
+        getSquare: function(num){
+            return num * num;
+        },
+        getRandom: function(){
+            return Math.random();
+        }
+    };
+});
+
+AvenueBlogApp.service("MathService", function (MathFactory) {
+    this.getExpectedComments = function(lines){
+        return MathFactory.getSquare(lines);
+    };
+});
+
+AvenueBlogApp.value("version", "1.0");
+AvenueBlogApp.value("appStrings", {
+    title: "Avenue Blog"
+});
+
+
