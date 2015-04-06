@@ -38,6 +38,16 @@ AvenueBlogApp.service("MathService", function (MathFactory) {
     };
 });
 
+AvenueBlogApp.directive("adbanner", function(){
+    return {
+        restrict: "E",
+        template: "<p><b>{{ad.adText}}</b> <a href='{{ad.adLink}}'>{{ad.adLink}}</a></p>",
+        scope: {
+            ad: "=name"
+        }
+    };
+});
+
 AvenueBlogApp.value("version", "1.0");
 AvenueBlogApp.value("appStrings", {
     title: "Avenue Blog"

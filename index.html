@@ -8,7 +8,7 @@
 	<script src="controllers/welcome.js" ></script>
 	<script src="controllers/addBlog.js" ></script>
 	<script src="controllers/addAuthor.js" ></script>
-	
+	<script src="controllers/adController.js" ></script>
 	
 </head>
 <body ng-app="AvenueBlog">
@@ -56,6 +56,13 @@
 				</ul>
 			</p>
 		</p>
+		
+		<p ng-controller="adController">
+			Directive Examples:
+			<adbanner name="banner1"></adbanner>
+			<adbanner name="banner2"></adbanner>
+		</p>
+		
 		<div ng-include="'includes/footer.html'"></div>
 		
 		<script type="text/ng-template" id="tmplAddBlog.htm">
