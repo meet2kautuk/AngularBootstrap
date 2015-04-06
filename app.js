@@ -41,7 +41,7 @@ AvenueBlogApp.service("MathService", function (MathFactory) {
 AvenueBlogApp.directive("adbanner", function(){
     return {
         restrict: "E",
-        template: "<p><b>{{ad.adText}}</b> <a href='{{ad.adLink}}'>{{ad.adLink}}</a></p>",
+        templateUrl: "tmplAdBanner.htm",
         scope: {
             ad: "=name"
         }
